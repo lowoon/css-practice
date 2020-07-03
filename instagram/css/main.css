@@ -10,6 +10,9 @@ body {
 }
 
 nav {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -17,7 +20,7 @@ nav {
   height: 80px;
 }
 
-.official {
+.logo-area {
   flex: 1;
   display: flex;
   justify-content: space-around;
@@ -26,7 +29,7 @@ nav {
   max-width: 50%;
 }
 
-.personal {
+.account {
   flex: 1;
   display: flex;
   justify-content: space-around;
@@ -51,17 +54,19 @@ nav {
   max-height: 100%;
 }
 
-.personal-icon {
+.account-icon {
   text-align: center;
   max-width: 25%;
 }
 
-.insta img, .personal-icon img {
+.insta img, .account-icon img {
   vertical-align: middle;
   max-height: 100%;
 }
 
 .profile {
+  position: relative;
+  top: 80px;
   border-bottom: 1px solid #d3d3d3;
   height: 260px;
 }
@@ -160,42 +165,49 @@ nav {
   text-align: center;
 }
 
-.article-nav {
+.posts-container {
+  position: relative;
+  top: 80px;
+}
+
+.posts-nav {
   height: 40px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.article-nav div {
+.posts-nav > div {
   height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.article-nav div img {
+.posts-nav > div > img {
   max-height: 80%;
 }
 
-.line {
+.posts {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.article {
+.post {
+  flex-basis: 33.3%;
   height: 120px;
-  margin: 1px;
+  padding: 1px;
 }
 
-.article img {
+.post img {
   height: 100%;
   width: 100%;
 }
 
-.article:first-child {
-  margin-left: 0;
+.post:nth-child(3n-2) {
+  padding-left: 0;
 }
 
-.article:last-child {
-  margin-right: 0;
+.post:nth-child(3n) {
+  padding-right: 0;
 }
